@@ -59,7 +59,8 @@ def total_gross(source)
   row_index = 0
   
   while row_index < list_dir_array.length do
-    grand_total += dir_earnings_hash.fetch(list_dir_array[row_index])
+    individual_dir = list_dir_array[row_index]
+    grand_total += dir_earnings_hash.fetch(individual_dir)
     row_index += 1
   end
   
