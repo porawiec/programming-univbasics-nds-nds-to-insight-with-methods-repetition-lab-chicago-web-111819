@@ -66,3 +66,21 @@ def total_gross(source)
   
   grand_total
 end
+
+=begin
+
+### WHATS ACTUALLY HAPPENING ###
+
+def total_gross(source)
+  grand_total = 0
+  row_index = 0
+  
+  while row_index < list_of_directors(source).length do
+    grand_total += directors_totals(source)[list_of_directors(source)[row_index]]
+    row_index += 1
+  end
+  
+  grand_total
+end
+
+=end
