@@ -53,11 +53,13 @@ def total_gross(source)
   # returned by directors_totals, and add it to a running total. When done,
   # return the total
   
+  dir_earnings_hash = directors_totals(source)
+  list_dir_array = list_of_directors(source)
   grand_total = 0
   row_index = 0
   
-  while row_index < source.length do
-    grand_total += directors_totals(source).fetch(list_of_directors(source)[row_index])
+  while row_index < list_dir_array.length do
+    grand_total += dir_earnings_hash.fetch(list_dir_array[row_index])
     row_index += 1
   end
   
